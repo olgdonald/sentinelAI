@@ -1,0 +1,244 @@
+/* Conteneur principal */
+.login-container,
+.register-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Colonne illustration */
+.login-illustration,
+.register-illustration {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.illustration-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Colonne formulaire */
+.login-form-wrapper,
+.register-form-wrapper {
+  flex: 1 1 400px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Titre */
+.login-title,
+.register-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.brand-name {
+  color: #6c56f9;
+  font-weight: bold;
+}
+
+/* Formulaire */
+.login-form .form-group,
+.register-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Options */
+.form-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 0.5rem;
+}
+
+.forgot-password-link {
+  color: #6c56f9;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Bouton principal */
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6c56f9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #5845c2;
+}
+
+/* Lien bas de page */
+.no-account,
+.already-account {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.link-register,
+.link-login {
+  color: #6c56f9;
+  text-decoration: none;
+}
+
+.link-register:hover,
+.link-login:hover {
+  text-decoration: underline;
+}
+
+/* Séparateur */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.separator .line {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.separator .or-text {
+  margin: 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Boutons sociaux */
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-social {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-social:hover {
+  background-color: #f0f0f0;
+}
+
+.social-icon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* =====================
+   Responsive media queries
+   ===================== */
+@media (max-width: 992px) {
+  .login-container,
+  .register-container {
+    flex-direction: column;
+  }
+
+  .login-illustration,
+  .register-illustration {
+    order: 1;
+    max-height: 250px;
+  }
+
+  .login-form-wrapper,
+  .register-form-wrapper {
+    order: 2;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-social {
+    flex: 1 1 100%;
+  }
+
+  .input-field {
+    font-size: 0.95rem;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
