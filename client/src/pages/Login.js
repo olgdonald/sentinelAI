@@ -22,7 +22,7 @@ const Login = () => {
 
     console.log({ email, password, rememberMe });
     // rediriger vers la page souhaitée après connexion
-    navigate('/dashboard');
+    navigate('/workspace');
   };
 
   return (
